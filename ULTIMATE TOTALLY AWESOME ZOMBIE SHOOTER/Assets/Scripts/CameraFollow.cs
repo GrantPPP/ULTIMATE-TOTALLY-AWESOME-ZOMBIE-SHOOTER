@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] Transform player;
+    [SerializeField] float timeoffset;
+    [SerializeField] Vector3 offsetPos;
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] Vector3 boundsMin;
+    [SerializeField] Vector3 boundsMax;
+
+
+    private void LateUpdate()
     {
-        
+        if(player != null)
+        {
+            Vector3 startPos = transform.position;
+            Vector3 targetPos = player.position;
+
+            targetPos.x += offsetPos.x; 
+            targetPos.y += offsetPos.y;
+            targetPos.z += transform.position.z;
+
+            targetPos.x = Mathf.Clamp(targetPos.x, boundsMin.x, boundsMax.x);
+            targetPos.y = Mathf.Clamp(targetPos.y, boundsMin.y, boundsMax.y);
+
+            float t = 1f - Mathf.Pow(1f - timeoffset, Time.deltaTime * 30);
+            transform.position = Vector3.Lerp(startPos, targetPos, t);
+        }
     }
 }

@@ -278,6 +278,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b591156da987176448a24ffbfd8c87d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1978521289}
+  timeoffset: 0.25
+  offsetPos: {x: 0, y: 0, z: 0}
+  boundsMin: {x: 0.84, y: 0, z: 0}
+  boundsMax: {x: 0, y: 0, z: 0}
 --- !u!1 &740734698
 GameObject:
   m_ObjectHideFlags: 0
