@@ -1,0 +1,386 @@
+fileFormatVersion: 2
+guid: 0f1062bc858d13f408e487e098e7ece4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 523, z: 228, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Still
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 538
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f62f24ff9b1ebf4cab3ed5fb435a6e9
+      internalID: -1292370347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blink
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 538
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a337dbdc666a1684db3df245f1c152c8
+      internalID: 889320570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk1
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 538
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b8dc3ffb1f667428e2be70ea3e46d4
+      internalID: -1091858891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 538
+        width: 48
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a77e93236c886bf4abcfd064486e64bb
+      internalID: 482922690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk3
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 538
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84d4203bb3ae4b47b84275ffb9c42ba
+      internalID: -784452900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk4
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 538
+        width: 42
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7578fb61ade096748bf3fa9832aff261
+      internalID: -2027458014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 526
+        width: 46
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3784a700d91e342498db28533701ddb2
+      internalID: 1558473660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      zomboy_12: -139221847
+      zomboy_84: 217847567
+      jump: 1558473660
+      zomboy_11: -1932552749
+      blink: 889320570
+      zomboy_48: 6378365
+      zomboy_59: -601589471
+      zomboy_39: -1321267175
+      zomboy_57: 356804969
+      zomboy_74: -408769331
+      zomboy_100: -2054541180
+      zomboy_7: -2057494248
+      zomboy_42: 1063768468
+      zomboy_65: 150110462
+      zomboy_63: 884741347
+      zomboy_92: -34274026
+      zomboy_9: 201175363
+      zomboy_77: 819853756
+      zomboy_86: -616054734
+      zomboy_50: 1360182966
+      zomboy_51: 2145071508
+      zomboy_52: -1167995627
+      zomboy_83: -42773439
+      walk4: -2027458014
+      zomboy_79: 2059509089
+      zomboy_60: 1573941895
+      zomboy_26: 359388997
+      zomboy_10: -1368243556
+      zomboy_19: -557884829
+      zomboy_73: 1216591198
+      zomboy_46: -45884374
+      zomboy_89: -1049897963
+      zomboy_70: -1030256061
+      zomboy_82: 1809966305
+      zomboy_38: -708305010
+      zomboy_15: -681546658
+      zomboy_18: 954636554
+      zomboy_30: 873750754
+      zomboy_28: 1067001981
+      zomboy_95: -716757006
+      zomboy_13: 1237307028
+      zomboy_101: -1551546970
+      zomboy_56: -1626209992
+      zomboy_75: -267389640
+      zomboy_32: 1025980975
+      zomboy_71: 444444065
+      zomboy_94: 331529310
+      zomboy_88: 1012310106
+      zomboy_90: 1827302307
+      zomboy_53: -1560628965
+      zomboy_78: 1799581155
+      zomboy_20: 1494357162
+      zomboy_58: -209219497
+      zomboy_98: -450014521
+      walk3: -784452900
+      zomboy_14: 496767608
+      zomboy_49: 1583743847
+      zomboy_36: -1663128224
+      zomboy_97: -774670367
+      zomboy_27: -1899975615
+      zomboy_85: -806444425
+      zomboy_40: 260310541
+      zomboy_41: -2061720201
+      zomboy_93: -296576087
+      zomboy_67: -919163341
+      zomboy_8: -1400287354
+      zomboy_35: -1861319710
+      zomboy_33: 451631093
+      zomboy_34: 989607835
+      zomboy_72: -688990680
+      zomboy_76: -1469891849
+      zomboy_62: -1918191038
+      zomboy_16: -406165832
+      Still: -1292370347
+      zomboy_43: -233802946
+      zomboy_21: -872686490
+      walk2: 482922690
+      zomboy_0: 367452174
+      zomboy_102: -291539013
+      zomboy_29: 211801881
+      zomboy_61: 260477751
+      zomboy_96: -1225274824
+      zomboy_47: -310853052
+      zomboy_68: 1962757346
+      zomboy_55: 728366734
+      zomboy_87: -1665211612
+      zomboy_25: 26620168
+      zomboy_91: -672979720
+      walk1: -1091858891
+      zomboy_80: 823211179
+      zomboy_45: 2057437104
+      zomboy_54: -2113100970
+      zomboy_24: -793904206
+      zomboy_31: -1944830269
+      zomboy_66: -648079548
+      zomboy_103: -1350851848
+      zomboy_23: -384846242
+      zomboy_22: 1965145556
+      zomboy_69: -2004213873
+      zomboy_17: 594026554
+      zomboy_81: 1552133978
+      zomboy_44: 222844750
+      zomboy_64: -1588168501
+      zomboy_37: -173424096
+      zomboy_99: -930560484
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
