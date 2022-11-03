@@ -48,6 +48,9 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
         }
         //draw debug lines
+        raycastColor = (isGround) > Color.green : Color:red;
+        Debug.DrawRay(box_orgin + new Vector3(box2d.bounds.extents.x, 0), Vector2.down * (box2d.bounds.extents.y / 4f + raycastDistance), raycastColor);
+        Debug.DrawRay(box_orgin + new Vector3(box2d.bounds.extents.x, 0), Vector2.down * (box2d.bounds.extents.y / 4f + raycastDistance), raycastColor);
     }
 
 
