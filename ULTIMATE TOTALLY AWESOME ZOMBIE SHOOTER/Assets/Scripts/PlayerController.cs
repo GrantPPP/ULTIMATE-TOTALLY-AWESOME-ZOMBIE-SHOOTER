@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
 
     bool isGrounded;
     bool isShooting; 
-    bool isFacingRight;
+    //bool isFacingRight;
 
     void Start()
     {
@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
 
         //sprite defaults to facing right
-        isFacingRight = true;
+        //isFacingRight = true;
     }
 
     private void FixedUpdate()
@@ -37,31 +37,55 @@ public class PlayerController : MonoBehaviour
         float raycastDistance = 0.05f;
         int layerMask = 1 << LayerMask.NameToLayer("Ground");
         //ground check
-        Vector3 box_orgin = box2d.bounds.center;
-        box_origin.y = box2d_bounds.min.y + (box2d.bounds.extents.y / 4f);
+        Vector3 box_origin = box2d.bounds.center;
+        box_origin.y = box2d.bounds.min.y + (box2d.bounds.extents.y / 4f);
         Vector3 box_size = box2d.bounds.size;
         box_size.y = box2d.bounds.size.y / 4f;
-        raycastHit = Physics2d.BoxCast(box_orgin, box_size, 0f, Vector2.down, raycastDistance, layerMask);
+        raycastHit = Physics2D.BoxCast(box_origin, box_size, 0f, Vector2.down, raycastDistance, layerMask);
         //player box colliding with ground layer
-        if(raycastHit.collidder != null)
+        if(raycastHit.collider != null)
         {
             isGrounded = true;
         }
         //draw debug lines
-        raycastColor = (isGround) > Color.green : Color:red;
-        Debug.DrawRay(box_orgin + new Vector3(box2d.bounds.extents.x, 0), Vector2.down * (box2d.bounds.extents.y / 4f + raycastDistance), raycastColor);
-        Debug.DrawRay(box_orgin + new Vector3(box2d.bounds.extents.x, 0), Vector2.down * (box2d.bounds.extents.y / 4f + raycastDistance), raycastColor);
+        raycastColor = (isGrounded) ? Color.green : Color.red;
+        Debug.DrawRay(box_origin + new Vector3(box2d.bounds.extents.x, 0), Vector2.down * (box2d.bounds.extents.y / 4f + raycastDistance), raycastColor);
+        Debug.DrawRay(box_origin - new Vector3(box2d.bounds.extents.x, 0), Vector2.down * (box2d.bounds.extents.y / 4f + raycastDistance), raycastColor);
+        Debug.DrawRay(box_origin - new Vector3(box2d.bounds.extents.x, box2d.bounds.extents.y / 4 + raycastDistance), Vector2.right * (box2d.bounds.extents.x * 2), raycastColor);
+
+
     }
+
 
 
     void Update()
     {
         keyHorizontal = Input.GetAxisRaw("Horizontal");
         keyjump = Input.GetKeyDown(KeyCode.Space);
-        rb2d.velocity = new Vector2(keyHorizontal * movespeed, rb2d.velocity.y);
-        if(keyjump)
+        keyShoot = Input.GetKey(KeyCode.C);
+
+        if(keyHorizontal < 0)
+        {
+            rb2d.velocity = new Vector2(-movespeed, rb2d.velocity.y);
+        }
+        else if(keyHorizontal > 0)
+        {
+            rb2d.velocity = new Vector2(keyHorizontal * movespeed, rb2d.velocity.y);
+        }
+        else
+        {
+            rb2d.velocity = new Vector2(0f, rb2d.velocity.y);
+        }
+
+      
+        if(keyjump && isGrounded)
         {
             rb2d.velocity = new Vector2(rb2d.velocity.x, jumpspeed);
+        }
+
+        if(!isGrounded)
+        {
+
         }
     }
 }
