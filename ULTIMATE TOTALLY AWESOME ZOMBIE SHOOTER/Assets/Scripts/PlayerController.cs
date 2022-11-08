@@ -66,26 +66,47 @@ public class PlayerController : MonoBehaviour
 
         if(keyHorizontal < 0)
         {
+            if(isGrounded)
+            {
+                animator.Play("Player_Run");
+            }
+            
+
             rb2d.velocity = new Vector2(-movespeed, rb2d.velocity.y);
         }
         else if(keyHorizontal > 0)
         {
+            if(isGrounded)
+            {
+                animator.Play("Player_Run");
+            }
+            
             rb2d.velocity = new Vector2(keyHorizontal * movespeed, rb2d.velocity.y);
         }
         else
         {
+            if(isGrounded)
+            {
+                animator.Play("Player_Idle");
+            }
+            
             rb2d.velocity = new Vector2(0f, rb2d.velocity.y);
         }
 
       
-        if(keyjump && isGrounded)
+        if(keyjump)
         {
+            if(isGrounded)
+            {
+            animator.Play("Player_Jump");
             rb2d.velocity = new Vector2(rb2d.velocity.x, jumpspeed);
+            }
         }
-
+        
         if(!isGrounded)
         {
-
+            animator.Play("Player_Jump");
         }
+        
     }
 }
