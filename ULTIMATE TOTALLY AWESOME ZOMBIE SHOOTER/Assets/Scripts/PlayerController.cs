@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
 
     bool isGrounded;
     bool isShooting; 
-    //bool isFacingRight;
+    bool isFacingRight;
 
     void Start()
     {
@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
 
         //sprite defaults to facing right
-        //isFacingRight = true;
+        isFacingRight = true;
     }
 
     private void FixedUpdate()
@@ -66,6 +66,11 @@ public class PlayerController : MonoBehaviour
 
         if(keyHorizontal < 0)
         {
+            if(!isFacingRight)
+            {
+                Flip();
+            }
+
             if(isGrounded)
             {
                 animator.Play("Player_Run");
@@ -108,5 +113,10 @@ public class PlayerController : MonoBehaviour
             animator.Play("Player_Jump");
         }
         
+        void Flip()
+        {
+            isFacingRight = !isFacingRight;
+            transform.Rotate(180f, 0f);
+        }
     }
 }
