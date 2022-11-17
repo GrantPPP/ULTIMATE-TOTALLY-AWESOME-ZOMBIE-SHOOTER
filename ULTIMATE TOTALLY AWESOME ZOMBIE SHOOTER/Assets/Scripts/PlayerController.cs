@@ -66,11 +66,10 @@ public class PlayerController : MonoBehaviour
 
         if(keyHorizontal < 0)
         {
-            if(!isFacingRight)
+            if(isFacingRight)
             {
-                Flip();
+            Flip();
             }
-
             if(isGrounded)
             {
                 animator.Play("Player_Run");
@@ -81,6 +80,10 @@ public class PlayerController : MonoBehaviour
         }
         else if(keyHorizontal > 0)
         {
+            if(!isFacingRight)
+            {
+            Flip();
+            }
             if(isGrounded)
             {
                 animator.Play("Player_Run");
@@ -116,7 +119,7 @@ public class PlayerController : MonoBehaviour
         void Flip()
         {
             isFacingRight = !isFacingRight;
-            transform.Rotate(180f, 0f);
+            transform.Rotate(0f, 180f, 0f);
         }
     }
 }
