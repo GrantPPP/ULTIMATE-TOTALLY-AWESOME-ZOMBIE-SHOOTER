@@ -64,6 +64,8 @@ public class PlayerController : MonoBehaviour
         keyjump = Input.GetKeyDown(KeyCode.Space);
         keyShoot = Input.GetKey(KeyCode.C);
 
+        isShooting = keyShoot;
+
         if(keyHorizontal < 0)
         {
             if(isFacingRight)
@@ -72,7 +74,14 @@ public class PlayerController : MonoBehaviour
             }
             if(isGrounded)
             {
+                if(isShooting)
+                {
+                    animator.Play("Player_RunShoot");
+                }
+                else
+                {
                 animator.Play("Player_Run");
+                }
             }
             
 
@@ -86,7 +95,14 @@ public class PlayerController : MonoBehaviour
             }
             if(isGrounded)
             {
+                if(isShooting)
+                {
+                    animator.Play("Player_RunShoot");
+                }
+                else
+                {
                 animator.Play("Player_Run");
+                }
             }
             
             rb2d.velocity = new Vector2(keyHorizontal * movespeed, rb2d.velocity.y);
@@ -102,18 +118,32 @@ public class PlayerController : MonoBehaviour
         }
 
       
-        if(keyjump)
+        if(keyjump && isGrounded)
         {
-            if(isGrounded)
+            if(isShooting)
             {
-            animator.Play("Player_Jump");
-            rb2d.velocity = new Vector2(rb2d.velocity.x, jumpspeed);
+                animator.Play("Player_JumpShoot");
             }
+            else
+            {
+                animator.Play("Player_Jump");
+            }
+            
+            
+            rb2d.velocity = new Vector2(rb2d.velocity.x, jumpspeed);
+            
         }
         
         if(!isGrounded)
         {
-            animator.Play("Player_Jump");
+            if(isShooting)
+            {
+                animator.Play("Player_JumpShoot");
+            }
+            else
+            {
+                animator.Play("Player_Jump");
+            }
         }
         
         void Flip()
