@@ -1,0 +1,448 @@
+fileFormatVersion: 2
+guid: 924524cace0a3a349b7afb28400e41d6
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Climb1
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 528
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea2ee9adab68e4845a9d246fc966be12
+      internalID: 2142027545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Climb2
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 542
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 796e218f7fa26854cac56b4e26501379
+      internalID: 1264609506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shoot
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 476
+        width: 60
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e175e92df5432074989ea743f6d4c647
+      internalID: 1565003763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Shoot1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 476
+        width: 58
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6a3381c643e49747931e2db741deb8b
+      internalID: -227375642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Shoot2
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 476
+        width: 52
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69d6ba7919913ba43a0eaa972800d69d
+      internalID: -1304293662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Shoot3
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 476
+        width: 60
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abf26fe9ba368fe46bc8e5c0a0e613a7
+      internalID: 464172317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump_Shoot1
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 464
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4cd7686b292b184694b09b305f38f7b
+      internalID: 1873514807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump_Shoot2
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 466
+        width: 50
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3731d98e469e0cd47abf89765135db9c
+      internalID: -2137446427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shoot_Crouch
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 476
+        width: 52
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d9c148b0d7b2b41a29c1a5f1dd85a5
+      internalID: 1727045162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electrocute
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 220
+        width: 50
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5eca9439168b9a4dbf6f4f33900b142
+      internalID: -991721959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      mail_22: -362361282
+      mail_72: -1941171673
+      mail_44: -1317819248
+      mail_55: -1283694406
+      Run_Shoot2: -1304293662
+      mail_69: 1690838469
+      mail_82: -602172490
+      Shoot_Crouch: 1727045162
+      mail_75: -2115006355
+      mail_85: 639758682
+      mail_18: 909248830
+      mail_17: 1770520388
+      mail_43: 798641113
+      mail_97: -1202944478
+      mail_23: 731936579
+      mail_1: -1982854712
+      mail_56: 899159074
+      mail_46: -1210948605
+      mail_99: 1729280648
+      mail_4: 365087142
+      mail_53: -777765372
+      mail_58: -1533378961
+      mail_63: 2087446840
+      mail_37: 1412346467
+      mail_64: -1566157328
+      mail_52: -1263627993
+      mail_91: -674669181
+      mail_92: -1559901961
+      mail_40: -743275915
+      Shoot: 1565003763
+      mail_25: 1963096073
+      mail_42: -1992965019
+      mail_50: 502674935
+      mail_86: -182279315
+      mail_95: 1143651600
+      mail_9: 1816080518
+      Run_Shoot3: 464172317
+      mail_70: 2139567679
+      mail_3: 1020587182
+      mail_27: -1446433702
+      mail_38: -67182565
+      mail_20: -1450956006
+      mail_74: -317186896
+      mail_90: 1498944885
+      Jump_Shoot2: -2137446427
+      mail_102: 1562164525
+      mail_6: 1291465216
+      mail_93: -1867806722
+      mail_84: -184063015
+      mail_19: 1206749210
+      mail_81: 1037565366
+      mail_48: -1996815269
+      mail_103: -978510983
+      mail_21: 225966975
+      mail_47: -1355281942
+      mail_98: 1457601590
+      mail_57: 701664528
+      mail_80: -1360179016
+      Jump_Shoot1: 1873514807
+      mail_78: -1112638862
+      mail_35: -138116375
+      mail_26: -654698961
+      mail_96: 2104289232
+      mail_54: -1724236663
+      mail_59: -621639949
+      mail_83: -2129945642
+      mail_94: 1068247183
+      Run_Shoot1: -227375642
+      mail_5: 1751914653
+      mail_89: -305662724
+      mail_61: -675296908
+      mail_29: -540939142
+      Electrocute: -991721959
+      mail_34: 802087272
+      mail_87: 1666648695
+      mail_36: 98631654
+      mail_2: 1382039093
+      mail_51: -1078803460
+      mail_65: -898752995
+      mail_73: 48855995
+      mail_39: 1610235292
+      mail_101: 644004787
+      mail_33: -417578983
+      mail_79: 743538164
+      mail_68: -1328671892
+      mail_88: 1277633123
+      mail_28: -1340070917
+      mail_30: 406261497
+      mail_67: -930084370
+      mail_41: -400357417
+      mail_100: -364521820
+      mail_49: -1712643089
+      mail_45: -988027244
+      mail_32: -756099350
+      mail_62: 1785824375
+      mail_71: 382068108
+      mail_76: -559204184
+      mail_77: 1419630773
+      mail_0: 44437260
+      mail_24: -895345887
+      mail_66: -673394063
+      Climb2: 1264609506
+      Climb1: 2142027545
+      mail_31: -761263866
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
