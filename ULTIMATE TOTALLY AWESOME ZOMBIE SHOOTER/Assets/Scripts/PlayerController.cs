@@ -111,7 +111,15 @@ public class PlayerController : MonoBehaviour
         {
             if(isGrounded)
             {
-                animator.Play("Player_Idle");
+                if(isShooting)
+                {
+                    animator.Play("Player_Shoot");
+                }
+                else
+                {
+                    animator.Play("Player_Idle");
+                }
+                
             }
             
             rb2d.velocity = new Vector2(0f, rb2d.velocity.y);
