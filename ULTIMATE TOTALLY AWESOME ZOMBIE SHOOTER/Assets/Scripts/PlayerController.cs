@@ -19,6 +19,9 @@ public class PlayerController : MonoBehaviour
     bool isShooting; 
     bool isFacingRight;
 
+    float shootTime;
+    bool keyShootRelease;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -60,32 +63,68 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        keyHorizontal = Input.GetAxisRaw("Horizontal");
-        keyjump = Input.GetKeyDown(KeyCode.Space);
-        keyShoot = Input.GetKey(KeyCode.C);
+        PlayerDirectionInput();
+        PlayerShootInput();
+        PlayerMovement();  
+    }    
 
-        isShooting = keyShoot;
 
+    void PlayerDirectionInput()
+    {
+    keyHorizontal = Input.GetAxisRaw("Horizontal");
+    keyjump = Input.GetKeyDown(KeyCode.Space);
+    keyShoot = Input.GetKey(KeyCode.C);
+    }
+
+    void PlayerShootInput()
+    {
+        float shootTimeLength = 0;
+        float keyShootReleaseTimeLength = 0;
+
+        if(keyShoot && keyShootRelease)
+        {
+            isShooting = true;
+            keyShootRelease = false;
+            shootTime = Time.time;
+            //Shoot Bullet
+        }
+        if(!keyShoot && !keyShootRelease)
+        {
+            keyShootReleaseTimeLength = Time.time - shootTime;
+            keyShootRelease = true;
+        }
+        if(isShooting)
+        {
+            shootTimeLength = Time.time - shootTime;
+            if(shootTimeLength >= 0.25f || keyShootReleaseTimeLength >= 0.15f)
+            {
+                isShooting = false;
+            }
+        }
+    }
+
+    void PlayerMovement()
+    {
         if(keyHorizontal < 0)
         {
-            if(isFacingRight)
+        if(isFacingRight)
+        {
+        Flip();
+        }
+        if(isGrounded)
+        {
+            if(isShooting)
             {
-            Flip();
+                animator.Play("Player_RunShoot");
             }
-            if(isGrounded)
+            else
             {
-                if(isShooting)
-                {
-                    animator.Play("Player_RunShoot");
-                }
-                else
-                {
-                animator.Play("Player_Run");
-                }
+            animator.Play("Player_Run");
             }
+        }
             
 
-            rb2d.velocity = new Vector2(-movespeed, rb2d.velocity.y);
+        rb2d.velocity = new Vector2(-movespeed, rb2d.velocity.y);
         }
         else if(keyHorizontal > 0)
         {
@@ -105,59 +144,61 @@ public class PlayerController : MonoBehaviour
                 }
             }
             
-            rb2d.velocity = new Vector2(keyHorizontal * movespeed, rb2d.velocity.y);
+        rb2d.velocity = new Vector2(keyHorizontal * movespeed, rb2d.velocity.y);
+    }
+    else
+    {
+           if(isGrounded)
+        {
+            if(isShooting)
+            {
+                animator.Play("Player_Shoot");
+            }
+            else
+            {
+                animator.Play("Player_Idle");
+            }
+                
+        }
+            
+        rb2d.velocity = new Vector2(0f, rb2d.velocity.y);
+    }
+
+      
+    if(keyjump && isGrounded)
+    {
+        if(isShooting)
+        {
+            animator.Play("Player_JumpShoot");
         }
         else
         {
-            if(isGrounded)
-            {
-                if(isShooting)
-                {
-                    animator.Play("Player_Shoot");
-                }
-                else
-                {
-                    animator.Play("Player_Idle");
-                }
-                
-            }
-            
-            rb2d.velocity = new Vector2(0f, rb2d.velocity.y);
+            animator.Play("Player_Jump");
         }
-
-      
-        if(keyjump && isGrounded)
-        {
-            if(isShooting)
-            {
-                animator.Play("Player_JumpShoot");
-            }
-            else
-            {
-                animator.Play("Player_Jump");
-            }
             
             
-            rb2d.velocity = new Vector2(rb2d.velocity.x, jumpspeed);
+        rb2d.velocity = new Vector2(rb2d.velocity.x, jumpspeed);
             
-        }
+    }
         
-        if(!isGrounded)
+    if(!isGrounded)
+    {
+        if(isShooting)
         {
-            if(isShooting)
-            {
-                animator.Play("Player_JumpShoot");
-            }
-            else
-            {
-                animator.Play("Player_Jump");
-            }
+            animator.Play("Player_JumpShoot");
         }
-        
-        void Flip()
+        else
         {
-            isFacingRight = !isFacingRight;
-            transform.Rotate(0f, 180f, 0f);
+            animator.Play("Player_Jump");
         }
     }
+    }
+        
+    void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        transform.Rotate(0f, 180f, 0f);
+    }
+
+    
 }
