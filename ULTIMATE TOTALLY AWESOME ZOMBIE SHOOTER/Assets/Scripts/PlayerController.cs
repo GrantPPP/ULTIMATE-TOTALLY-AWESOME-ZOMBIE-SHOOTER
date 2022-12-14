@@ -13,11 +13,18 @@ public class PlayerController : MonoBehaviour
     bool keyShoot;
 
     bool isGrounded;
-    bool isShooting; 
+    bool isShooting;
+    bool isTakingDamage;
+    bool isInvincible;
     bool isFacingRight;
+
+    bool hitSideRight;
 
     float shootTime;
     bool keyShootRelease;
+
+    public int currentHealth;
+    public int maxHealth = 28;
 
     [SerializeField] float movespeed = 1.5f;
     [SerializeField] float jumpspeed = 3.7f; 
@@ -100,7 +107,7 @@ public class PlayerController : MonoBehaviour
             keyShootRelease = false;
             shootTime = Time.time;
             //Shoot Bullet
-            ShootBullet();
+            Invoke("ShootBullet", 0.1f);
         }
         if(!keyShoot && !keyShootRelease)
         {
