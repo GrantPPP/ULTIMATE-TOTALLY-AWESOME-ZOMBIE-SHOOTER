@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8bc0e1ea53ac08542a5769d50142349b
+guid: b66f656c76a5bb5439f9b046d77a9387
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,34 +116,34 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Still
+      name: Damage
       rect:
         serializedVersion: 2
-        x: 18
-        y: 134
-        width: 28
-        height: 54
-      alignment: 0
+        x: 186
+        y: 126
+        width: 52
+        height: 46
+      alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 761e8b22e59a40b46b7783328ace3acf
-      internalID: -59085437
+      spriteID: 10cfca88b4618384cb0136d863298061
+      internalID: -381256644
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoot
+      name: Healthbar
       rect:
         serializedVersion: 2
-        x: 74
-        y: 134
-        width: 44
-        height: 54
+        x: 322
+        y: 30
+        width: 22
+        height: 124
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,50 +151,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0e91b113e3068c4bb7c226072239aee
-      internalID: 2100684664
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Prone
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 72
-        width: 56
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 731e610674286614e9b598ce7f0c505e
-      internalID: -83445523
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jump
-      rect:
-        serializedVersion: 2
-        x: 82
-        y: 70
-        width: 38
-        height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1ee8ddff31c1f54583e8f44d461af37
-      internalID: -46054713
+      spriteID: ac97d17a329eaef49939e594beb7e3b0
+      internalID: 1376665487
       vertices: []
       indices: 
       edges: []
@@ -210,11 +168,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Prone: -83445523
-      Shoot: 2100684664
-      unnamed_4: -2012639632
-      Still: -59085437
-      Jump: -46054713
+      Healthbar: 1376665487
+      mail_9: -875617275
+      mail_13: -146190252
+      mail_7: -1174946415
+      mail_10: -840480036
+      mail_3: -1555066984
+      mail_5: 1491546403
+      mail_11: 477956651
+      mail_12: -2114618298
+      mail_8: -683692742
+      Damage: -381256644
+      mail_1: -1197724862
+      mail_6: -2140467241
+      mail_4: 1347075940
+      mail_2: -235636449
+      mail_0: 1488326477
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
