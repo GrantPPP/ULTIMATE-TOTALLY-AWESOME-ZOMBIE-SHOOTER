@@ -82,6 +82,13 @@ public class PlayerController : MonoBehaviour
         PlayerJumpInput();
         PlayerShootInput();
         PlayerMovement();  
+        
+
+        if(isTakingDamage)
+        {
+            animator.Play("Player_Hit");
+            return;
+        }
     }    
 
 
@@ -279,7 +286,7 @@ public class PlayerController : MonoBehaviour
     {
         isTakingDamage = false;
         isInvincible = false;
-        
+        animator.Play("Player_Hit", -1, 0f);
     }
 
     void Defeat()
