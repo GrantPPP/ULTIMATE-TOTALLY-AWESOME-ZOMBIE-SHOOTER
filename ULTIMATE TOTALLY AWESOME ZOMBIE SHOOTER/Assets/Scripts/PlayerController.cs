@@ -279,6 +279,7 @@ public class PlayerController : MonoBehaviour
             if(hitSideRight) hitForceX = -hitForceX;
             rb2d.velocity = Vector2.zero;
             rb2d.AddForce(new Vector2(hitForceX, hitForceY), ForceMode2D.Impulse);
+            
         }
     }
 
