@@ -270,9 +270,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed7f1b0035fb45243ae8461763947ab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
-  maxHealth: 1
-  contactDamage: 1
+  currentHealth: 5
+  maxHealth: 5
+  contactDamage: 5
 --- !u!1 &101925392
 GameObject:
   m_ObjectHideFlags: 0
@@ -2346,7 +2346,7 @@ MonoBehaviour:
   movespeed: 1.5
   jumpspeed: 3.7
   bulletDamage: 1
-  bulletSpeed: 5
+  bulletSpeed: 1
   bulletShootPos: {fileID: 1972821098}
   bulletPrefab: {fileID: 1600664157987998878, guid: 319c5636dfd96844fbce717b6b81c673, type: 3}
 --- !u!1 &2057565249
