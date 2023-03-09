@@ -2342,7 +2342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  maxHealth: 28
+  maxHealth: 5
   movespeed: 1.5
   jumpspeed: 3.7
   bulletDamage: 1

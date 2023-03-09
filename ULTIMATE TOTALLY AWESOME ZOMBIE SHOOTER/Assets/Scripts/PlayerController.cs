@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     public int currentHealth;
     public int maxHealth = 28;
 
+
+
     [SerializeField] float movespeed = 1.5f;
     [SerializeField] float jumpspeed = 3.7f; 
 
@@ -45,6 +47,8 @@ public class PlayerController : MonoBehaviour
         isFacingRight = true;
 
         currentHealth = maxHealth;
+
+        
     }
 
     private void FixedUpdate()
@@ -71,23 +75,27 @@ public class PlayerController : MonoBehaviour
         Debug.DrawRay(box_origin - new Vector3(box2d.bounds.extents.x, 0), Vector2.down * (box2d.bounds.extents.y / 4f + raycastDistance), raycastColor);
         Debug.DrawRay(box_origin - new Vector3(box2d.bounds.extents.x, box2d.bounds.extents.y / 4 + raycastDistance), Vector2.right * (box2d.bounds.extents.x * 2), raycastColor);
 
-
+        
     }
 
 
 
     void Update()
     {
-        PlayerDirectionInput();
-        PlayerJumpInput();
-        PlayerShootInput();
-        PlayerMovement();  
+        
+            PlayerDirectionInput();
+            PlayerJumpInput();
+            PlayerShootInput();
+            PlayerMovement();
+
+          
         
 
         if(isTakingDamage)
         {
             animator.Play("Player_Hit");
             return;
+
         }
     }    
 
@@ -260,6 +268,7 @@ public class PlayerController : MonoBehaviour
             if(currentHealth <= 0)
             {
                 Defeat();
+                animator.Play("Death");
             }
             else
             {
@@ -292,6 +301,11 @@ public class PlayerController : MonoBehaviour
 
     void Defeat()
     {
-        Destroy(gameObject);
+        Destroy(gameObject, 3f);
+        animator.Play("Death");
     }
+
+    
+
+    
 }
