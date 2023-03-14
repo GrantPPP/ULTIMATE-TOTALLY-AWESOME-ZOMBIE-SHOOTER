@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerController : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class PlayerController : MonoBehaviour
     public int currentHealth;
     public int maxHealth = 28;
 
-
+    public static event Action OnPlayerDeath;
 
     [SerializeField] float movespeed = 1.5f;
     [SerializeField] float jumpspeed = 3.7f; 
@@ -301,8 +302,9 @@ public class PlayerController : MonoBehaviour
 
     void Defeat()
     {
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 0f);
         animator.Play("Death");
+        OnPlayerDeath?.Invoke();
     }
 
     
