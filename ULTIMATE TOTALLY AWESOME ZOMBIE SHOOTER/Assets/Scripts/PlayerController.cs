@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour
         currentHealth = maxHealth;
 
         
+
     }
 
     private void FixedUpdate()
@@ -88,7 +89,7 @@ public class PlayerController : MonoBehaviour
             PlayerJumpInput();
             PlayerShootInput();
             PlayerMovement();
-
+            
           
         
 
@@ -302,11 +303,12 @@ public class PlayerController : MonoBehaviour
 
     void Defeat()
     {
-        //Destroy(gameObject, 0f);
+        Destroy(gameObject, 0f);
         //animator.Play("Death");
         OnPlayerDeath?.Invoke();
     }
 
+   
     
 
     
