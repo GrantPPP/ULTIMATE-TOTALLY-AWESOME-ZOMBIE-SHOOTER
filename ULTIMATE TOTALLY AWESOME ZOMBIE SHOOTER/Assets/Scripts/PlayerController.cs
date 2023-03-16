@@ -302,8 +302,8 @@ public class PlayerController : MonoBehaviour
 
     void Defeat()
     {
-        Destroy(gameObject, 0f);
-        animator.Play("Death");
+        //Destroy(gameObject, 0f);
+        //animator.Play("Death");
         OnPlayerDeath?.Invoke();
     }
 
