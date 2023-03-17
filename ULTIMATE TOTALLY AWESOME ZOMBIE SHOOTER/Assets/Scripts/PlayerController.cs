@@ -269,6 +269,7 @@ public class PlayerController : MonoBehaviour
             Mathf.Clamp(currentHealth, 0, maxHealth);
             if(currentHealth <= 0)
             {
+                OnPlayerDeath?.Invoke();
                 Defeat();
                 animator.Play("Death");
             }
@@ -304,8 +305,7 @@ public class PlayerController : MonoBehaviour
     void Defeat()
     {
         Destroy(gameObject, 0f);
-        //animator.Play("Death");
-        OnPlayerDeath?.Invoke();
+        
     }
 
    
