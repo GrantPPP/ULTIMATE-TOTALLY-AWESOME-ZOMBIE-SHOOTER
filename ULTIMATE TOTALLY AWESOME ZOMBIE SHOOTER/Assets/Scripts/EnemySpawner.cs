@@ -7,6 +7,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     public GameObject minions;
 
+    
+
     [SerializeField]
     public float spawnInterval = 3.5f;
 
@@ -14,14 +16,14 @@ public class EnemySpawner : MonoBehaviour
     void Start()
     {
         StartCoroutine(spawnEnemy(spawnInterval, minions));
-
+       
     }
 
     // Update is called once per frame
     private IEnumerator spawnEnemy(float interval, GameObject enemy)
     {
         yield return new WaitForSeconds(interval);
-        GameObject newEnemy = Instantiate(enemy, new Vector3(Random.Range(-6f, 6), -1.25f, 0), Quaternion.identity);
+        GameObject newEnemy = Instantiate(enemy, new Vector3(Random.Range(-6f, 6), -1.9f, 0), Quaternion.identity);
         StartCoroutine(spawnEnemy(interval, enemy));
     }
 }
