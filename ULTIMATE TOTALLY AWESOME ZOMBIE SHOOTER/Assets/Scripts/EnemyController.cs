@@ -4,17 +4,36 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+   
+    
     bool isInvincible;
 
     public int currentHealth;
     public int maxHealth = 1;
     public int contactDamage = 1;
-
+   
+   
+    
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+       
+        
+    }
+
+   
+
+    void Update()
+    {
+        
+        
+    }
+
+    void EnemyDirection()
+    {
+       
     }
 
     // Update is called once per frame
@@ -50,4 +69,5 @@ public class EnemyController : MonoBehaviour
             player.TakeDamage(this.contactDamage);
         }
     }
+
 }
