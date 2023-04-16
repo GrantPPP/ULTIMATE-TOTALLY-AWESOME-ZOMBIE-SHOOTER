@@ -6,11 +6,11 @@ public class EnemyBullet : MonoBehaviour
 {
     public GameObject player;
     private Rigidbody2D rb;
-    public float force; 
+    public float speed; 
 
     private float timer;
      
-
+    public int contactDamage = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,7 @@ public class EnemyBullet : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
 
         Vector3 direction = player.transform.position - transform.position;
-        rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
+        rb.velocity = new Vector2(direction.x, direction.y).normalized * speed;
 
         float rot = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rot + 180);
@@ -36,12 +36,18 @@ public class EnemyBullet : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    
+
+    private void OnTriggerStay2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<PlayerController>().currentHealth -= 5; 
+            PlayerController player = other.gameObject.GetComponent<PlayerController>();
+            player.HitSide(transform.position.x > player.transform.position.x);
+            player.TakeDamage(this.contactDamage);
             Destroy(gameObject);
         }
     }
 }
+
+

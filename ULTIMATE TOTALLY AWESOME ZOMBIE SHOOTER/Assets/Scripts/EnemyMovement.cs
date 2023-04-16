@@ -23,6 +23,8 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float distance = Vector2.Distance(transform.position, player.transform.position);
+
         if(player != null)
         {
         Vector3 scale = transform.localScale;
@@ -37,13 +39,10 @@ public class EnemyMovement : MonoBehaviour
             scale.x = Mathf.Abs(scale.x * (flip ? -1 : 1));
             transform.Translate(speed * Time.deltaTime * -1, 0, 0);
         }
-        if(speed > 0)
+        
+        if(distance > 3.25)
         {
-            animator.Play("Minion_Run");
-        }
-        else
-        {
-            animator.Play("Minion_Shoot");
+            animator.Play("Minion_RunShoot");
         }
 
         transform.localScale = scale;

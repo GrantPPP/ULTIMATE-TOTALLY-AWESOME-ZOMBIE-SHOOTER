@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minions: {fileID: 6100635896553191807}
   player: {fileID: 1978521284}
-  spawnInterval: 2
+  spawnInterval: 1.5
 --- !u!4 &90522011
 Transform:
   m_ObjectHideFlags: 0
@@ -2297,7 +2297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  maxHealth: 20
+  maxHealth: 25
   movespeed: 1.5
   jumpspeed: 5
   bulletDamage: 5
@@ -2459,11 +2459,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4034630278867964790, guid: 2817c5f9dfe9fbe448e54a972f88d576, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4034630278867964790, guid: 2817c5f9dfe9fbe448e54a972f88d576, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.9
       objectReference: {fileID: 0}
     - target: {fileID: 4034630278867964790, guid: 2817c5f9dfe9fbe448e54a972f88d576, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2725,7 +2725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 5
-  maxHealth: 5
+  maxHealth: 10
   contactDamage: 5
 --- !u!1 &6100635896553191807
 GameObject:
