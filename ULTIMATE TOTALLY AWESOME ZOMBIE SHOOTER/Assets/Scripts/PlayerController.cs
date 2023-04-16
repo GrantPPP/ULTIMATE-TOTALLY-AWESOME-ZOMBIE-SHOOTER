@@ -92,7 +92,8 @@ public class PlayerController : MonoBehaviour
             
         if(currentHealth <= 0)
         {
-            Destroy(gameObject);
+            Defeat();
+            OnPlayerDeath?.Invoke();
         }
         
 

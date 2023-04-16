@@ -9,10 +9,14 @@ public class EnemyMovement : MonoBehaviour
     public bool flip;
 
     public float speed;
+
+    Animator animator; 
+
     
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         
     }
 
@@ -32,6 +36,14 @@ public class EnemyMovement : MonoBehaviour
         {
             scale.x = Mathf.Abs(scale.x * (flip ? -1 : 1));
             transform.Translate(speed * Time.deltaTime * -1, 0, 0);
+        }
+        if(speed > 0)
+        {
+            animator.Play("Minion_Run");
+        }
+        else
+        {
+            animator.Play("Minion_Shoot");
         }
 
         transform.localScale = scale;

@@ -25,7 +25,7 @@ public class EnemyShoot : MonoBehaviour
 
         Debug.Log(distance);
 
-        if(distance < 5)
+        if(distance < 3)
         {
             timer += Time.deltaTime;
 
@@ -35,7 +35,7 @@ public class EnemyShoot : MonoBehaviour
                 shoot();
             }
 
-            //GetComponent<EnemyMovement>().speed = 0;
+            GetComponent<EnemyMovement>().speed = 0;
         }
 
         
