@@ -8,6 +8,9 @@ public class EnemyBullet : MonoBehaviour
     private Rigidbody2D rb;
     public float force; 
 
+    private float timer;
+     
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,20 @@ public class EnemyBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        timer += Time.deltaTime;
+
+        if(timer > 5)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            other.gameObject.GetComponent<PlayerController>().currentHealth -= 5; 
+            Destroy(gameObject);
+        }
     }
 }

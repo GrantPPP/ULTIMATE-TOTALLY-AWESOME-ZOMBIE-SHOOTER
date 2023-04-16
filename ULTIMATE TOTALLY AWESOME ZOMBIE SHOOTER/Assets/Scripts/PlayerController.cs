@@ -85,12 +85,15 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         
-            PlayerDirectionInput();
-            PlayerJumpInput();
-            PlayerShootInput();
-            PlayerMovement();
+        PlayerDirectionInput();
+        PlayerJumpInput();
+        PlayerShootInput();
+        PlayerMovement();
             
-          
+        if(currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
         
 
         if(isTakingDamage)
