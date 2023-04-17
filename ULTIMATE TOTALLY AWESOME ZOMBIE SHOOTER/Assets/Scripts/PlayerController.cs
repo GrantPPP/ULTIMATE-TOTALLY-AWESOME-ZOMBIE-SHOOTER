@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -26,6 +27,9 @@ public class PlayerController : MonoBehaviour
 
     public int currentHealth;
     public int maxHealth = 28;
+
+    public Image healthBar;
+    public float healthAmount = 100f;
 
     public static event Action OnPlayerDeath;
 
@@ -103,6 +107,8 @@ public class PlayerController : MonoBehaviour
             return;
 
         }
+
+        
     }    
 
 
@@ -276,10 +282,12 @@ public class PlayerController : MonoBehaviour
                 OnPlayerDeath?.Invoke();
                 Defeat();
                 animator.Play("Death");
+                TakeDamager(20);
             }
             else
             {
                 StartDamageAnimation();
+                TakeDamager(20);
             }
         }
     }
@@ -312,8 +320,11 @@ public class PlayerController : MonoBehaviour
         
     }
 
-   
-    
-
+   public void TakeDamager(float damage)
+    {
+        healthAmount -= damage;
+        healthBar.fillAmount = healthAmount / 100f;
+        
+    }
     
 }

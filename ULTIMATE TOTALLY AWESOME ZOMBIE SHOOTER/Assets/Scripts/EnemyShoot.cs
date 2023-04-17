@@ -31,9 +31,9 @@ public class EnemyShoot : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, player.transform.position);
 
-        //Debug.Log(distance);
+        Debug.Log(distance);
 
-        if(distance >= 3.25)
+        if(distance >= 2 && distance <= 4)
         {
             timer += Time.deltaTime;
             animator.Play("Minion_RunShoot");
@@ -45,11 +45,13 @@ public class EnemyShoot : MonoBehaviour
             
 
 
-        }else if(distance < 2.5)
+        }
+        
+        if(distance <= 2.5)
         {
             timer += Time.deltaTime;
 
-            if(timer > 2)
+            if(timer > 1.5)
             {
                 timer = 0;
                 Shoot();
@@ -57,7 +59,9 @@ public class EnemyShoot : MonoBehaviour
             }
 
             GetComponent<EnemyMovement>().speed = 0;
-        }else if(distance > 3)
+        }
+        
+        if(distance > 3)
         {
             GetComponent<EnemyMovement>().speed = 1; 
         }
