@@ -39,7 +39,10 @@ public class EnemyShoot : MonoBehaviour
             animator.Play("Minion_RunShoot");
             if(timer > 2)
             {
+                
                 Shoot();
+                
+                
                 timer = 0;
             }
             
@@ -54,7 +57,10 @@ public class EnemyShoot : MonoBehaviour
             if(timer > 1.5)
             {
                 timer = 0;
+                
+                
                 Shoot();
+                
                 animator.Play("Minion_Shoot");
             }
 
