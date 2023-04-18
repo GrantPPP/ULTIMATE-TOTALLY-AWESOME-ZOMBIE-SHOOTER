@@ -10,9 +10,12 @@ public class EnemyShoot : MonoBehaviour
     private float timer;
     private GameObject player;
 
-    
+    BoxCollider2D box2d; 
+    Rigidbody2D rb2d;
 
     Animator animator;
+
+    float playerY;
 
     // Start is called before the first frame update
     void Start()
@@ -21,13 +24,16 @@ public class EnemyShoot : MonoBehaviour
 
         animator = GetComponent<Animator>();
 
+        box2d = GetComponent<BoxCollider2D>();
+        rb2d = GetComponent<Rigidbody2D>();
 
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        playerY = GameObject.FindGameObjectWithTag("Player").transform.position.y;
 
         float distance = Vector2.Distance(transform.position, player.transform.position);
 
@@ -39,8 +45,11 @@ public class EnemyShoot : MonoBehaviour
             animator.Play("Minion_RunShoot");
             if(timer > 2)
             {
+                if(playerY < -1.5f)
+                {
+                    Shoot();
+                }
                 
-                Shoot();
                 
                 
                 timer = 0;
@@ -50,7 +59,7 @@ public class EnemyShoot : MonoBehaviour
 
         }
         
-        if(distance <= 2.5)
+        if(distance <= 2)
         {
             timer += Time.deltaTime;
 
@@ -59,7 +68,10 @@ public class EnemyShoot : MonoBehaviour
                 timer = 0;
                 
                 
-                Shoot();
+                if(playerY < -1.5f)
+                {
+                    Shoot();
+                }
                 
                 animator.Play("Minion_Shoot");
             }
@@ -67,7 +79,7 @@ public class EnemyShoot : MonoBehaviour
             GetComponent<EnemyMovement>().speed = 0;
         }
         
-        if(distance > 3)
+        if(distance > 2)
         {
             GetComponent<EnemyMovement>().speed = 1; 
         }

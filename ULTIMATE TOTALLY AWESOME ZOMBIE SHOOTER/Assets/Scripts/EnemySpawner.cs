@@ -57,8 +57,8 @@ public class EnemySpawner : MonoBehaviour
         if(player != null && isZero == false)
         {
         yield return new WaitForSeconds(interval);
-        GameObject leftEnemy = Instantiate(enemy, new Vector3(Random.Range(-8f, -5f), -1.9f, 0), Quaternion.identity);
-        GameObject rightEnemy = Instantiate(enemy, new Vector3(Random.Range(8f, 5f), -1.9f, 0), Quaternion.identity);
+        GameObject leftEnemy = Instantiate(enemy, new Vector3(Random.Range(-8f, -5f), -1.935414f, 0), Quaternion.identity);
+        GameObject rightEnemy = Instantiate(enemy, new Vector3(Random.Range(8f, 5f), -1.935414f, 0), Quaternion.identity);
         StartCoroutine(spawnEnemy(interval, enemy));
         }
     }
