@@ -45,7 +45,7 @@ public class EnemyShoot : MonoBehaviour
             animator.Play("Minion_RunShoot");
             if(timer > 2)
             {
-                if(playerY < -1.5f)
+                if(playerY <= rb2d.position.y)
                 {
                     Shoot();
                 }
@@ -68,7 +68,7 @@ public class EnemyShoot : MonoBehaviour
                 timer = 0;
                 
                 
-                if(playerY < -1.5f)
+                if(playerY <= rb2d.position.y)
                 {
                     Shoot();
                 }
