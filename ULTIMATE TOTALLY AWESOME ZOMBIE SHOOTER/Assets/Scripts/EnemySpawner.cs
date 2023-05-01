@@ -18,6 +18,8 @@ public class EnemySpawner : MonoBehaviour
 
     private bool isZero;
 
+    //private int numberOfEnemiesIS;
+
     [SerializeField] Text countdownText;
 
 
@@ -29,32 +31,43 @@ public class EnemySpawner : MonoBehaviour
         }
 
         currentTime = startingTime;
-        isZero = false;
+        isZero = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        currentTime -= 1 * Time.deltaTime;
+        //int numberOfEnemiesIS = GameObject.FindGameObjectWithTag("Enemy"); 
+
+        currentTime += Time.deltaTime;
         countdownText.text = currentTime.ToString("0");
 
-        if(currentTime <= 3)
+        if(GameObject.FindGameObjectsWithTag("Enemy").Length >= 8)
         {
-            isZero = true;
+            isZero = false;
+        }else if(GameObject.FindGameObjectsWithTag("Enemy").Length <= 8)
+        {
+            isZero = true; 
+            StartCoroutine(spawnEnemy(spawnInterval, minions));
         }
+
+        //if(currentTime <= 3)
+        //{
+           // isZero = true;
+        //}
         
-        if (currentTime <= 0)
-        {
-            currentTime = 0;
+        //if (currentTime <= 0)
+        //{
+            //currentTime = 0;
             
-        }
+        //}
     }
 
 
 
     private IEnumerator spawnEnemy(float interval, GameObject enemy)
     {
-        if(player != null && isZero == false)
+        if(player != null && isZero == true)
         {
         yield return new WaitForSeconds(interval);
         GameObject leftEnemy = Instantiate(enemy, new Vector3(Random.Range(-6.433831f, -5f), -1.935414f, 0), Quaternion.identity);

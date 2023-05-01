@@ -11,18 +11,20 @@ public class Timer : MonoBehaviour
     [SerializeField] Text countdownText;
     void Start()
     {
-        currentTime = startingTime;
+        currentTime = 0f;
     }
     void Update()
     {
-        currentTime -= 1 * Time.deltaTime;
+        currentTime += Time.deltaTime;
         countdownText.text = currentTime.ToString();
 
-        if (currentTime <= 0)
-        {
-            currentTime = 0;
-            
-            
-        }
+        
     }
 }
+
+//if (currentTime <= 0)
+        //{
+            //currentTime = 0;
+            
+            
+        //}
