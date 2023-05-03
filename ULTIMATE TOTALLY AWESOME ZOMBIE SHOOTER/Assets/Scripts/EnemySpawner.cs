@@ -25,13 +25,15 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {
+        isZero = true;
+
         if(player != null)
         {
         StartCoroutine(spawnEnemy(spawnInterval, minions));
         }
 
         currentTime = startingTime;
-        isZero = true;
+        
     }
 
     // Update is called once per frame
@@ -45,10 +47,9 @@ public class EnemySpawner : MonoBehaviour
         if(GameObject.FindGameObjectsWithTag("Enemy").Length >= 8)
         {
             isZero = false;
-        }else if(GameObject.FindGameObjectsWithTag("Enemy").Length <= 8)
+        }else if(GameObject.FindGameObjectsWithTag("Enemy").Length < 8)
         {
             isZero = true; 
-            StartCoroutine(spawnEnemy(spawnInterval, minions));
         }
 
         //if(currentTime <= 3)
@@ -73,7 +74,7 @@ public class EnemySpawner : MonoBehaviour
         GameObject leftEnemy = Instantiate(enemy, new Vector3(Random.Range(-6.433831f, -5f), -1.935414f, 0), Quaternion.identity);
         GameObject rightEnemy = Instantiate(enemy, new Vector3(Random.Range(6.439991f, 5f), -1.935414f, 0), Quaternion.identity);
         GameObject upperLeftEnemy = Instantiate(enemy, new Vector3(Random.Range(-6.433831f, -5f), -0.8963752f, 0), Quaternion.identity);
-        StartCoroutine(spawnEnemy(interval, enemy));
         }
+        StartCoroutine(spawnEnemy(interval, enemy));
     }
 }
