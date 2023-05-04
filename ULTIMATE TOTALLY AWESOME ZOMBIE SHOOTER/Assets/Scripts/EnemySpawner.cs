@@ -18,6 +18,8 @@ public class EnemySpawner : MonoBehaviour
 
     private bool isZero;
 
+    float spawnTime; 
+
     //private int numberOfEnemiesIS;
 
     [SerializeField] Text countdownText;
@@ -27,10 +29,10 @@ public class EnemySpawner : MonoBehaviour
     {
         isZero = true;
 
-        if(player != null)
-        {
-        StartCoroutine(spawnEnemy(spawnInterval, minions));
-        }
+        //if(player != null)
+       // {
+       // StartCoroutine(spawnEnemy(spawnInterval, minions));
+      //  }
 
         currentTime = startingTime;
         
@@ -43,13 +45,22 @@ public class EnemySpawner : MonoBehaviour
 
         currentTime += Time.deltaTime;
         countdownText.text = currentTime.ToString("0");
+        spawnTime += Time.deltaTime;
 
-        if(GameObject.FindGameObjectsWithTag("Enemy").Length >= 8)
+        Debug.Log(spawnTime);
+
+        if(GameObject.FindGameObjectsWithTag("Enemy").Length >= 6)
         {
             isZero = false;
-        }else if(GameObject.FindGameObjectsWithTag("Enemy").Length < 8)
-        {
+            spawnTime = 0;
+        }else{
+            
             isZero = true; 
+            if(spawnTime <= .1f && spawnTime > 0)
+            {
+                StartCoroutine(spawnEnemy(spawnInterval, minions));
+                spawnTime += 1; 
+            }
         }
 
         //if(currentTime <= 3)
@@ -59,7 +70,7 @@ public class EnemySpawner : MonoBehaviour
         
         //if (currentTime <= 0)
         //{
-            //currentTime = 0;
+            //currentTime = 0; if(GameObject.FindGameObjectsWithTag("Enemy").Length < 8)
             
         //}
     }
@@ -74,7 +85,8 @@ public class EnemySpawner : MonoBehaviour
         GameObject leftEnemy = Instantiate(enemy, new Vector3(Random.Range(-6.433831f, -5f), -1.935414f, 0), Quaternion.identity);
         GameObject rightEnemy = Instantiate(enemy, new Vector3(Random.Range(6.439991f, 5f), -1.935414f, 0), Quaternion.identity);
         GameObject upperLeftEnemy = Instantiate(enemy, new Vector3(Random.Range(-6.433831f, -5f), -0.8963752f, 0), Quaternion.identity);
-        }
         StartCoroutine(spawnEnemy(interval, enemy));
+        }
+        
     }
 }
