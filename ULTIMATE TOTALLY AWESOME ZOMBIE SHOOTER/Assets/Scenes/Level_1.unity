@@ -155,7 +155,7 @@ MonoBehaviour:
   minions: {fileID: 6100635896553191807}
   player: {fileID: 1978521284}
   spawnInterval: 1.5
-  amountOfEnemies: 60
+  amountOfEnemies: 99
   countdownText: {fileID: 706008233}
   remainingEnemies: {fileID: 1498867484}
   enemiesAlive: {fileID: 431338360}
@@ -2164,7 +2164,7 @@ AudioSource:
   m_Volume: 0.509
   m_Pitch: 1
   Loop: 0
-  Mute: 1
+  Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128

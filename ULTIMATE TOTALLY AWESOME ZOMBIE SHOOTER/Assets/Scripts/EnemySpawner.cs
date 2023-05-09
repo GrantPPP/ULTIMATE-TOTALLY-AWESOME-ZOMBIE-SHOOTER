@@ -17,7 +17,7 @@ public class EnemySpawner : MonoBehaviour
     public float spawnInterval = 3.5f;
 
     float currentTime;
-     float startingTime = 0f;
+    float startingTime = 0f;
 
     private bool isZero;
 
@@ -26,6 +26,8 @@ public class EnemySpawner : MonoBehaviour
     public int amountOfEnemies = 60;
 
     int aliveEnemies; 
+
+    bool isVictory; 
 
     //private int numberOfEnemiesIS;
 
@@ -39,6 +41,7 @@ public class EnemySpawner : MonoBehaviour
     {
         isZero = true;
 
+        isVictory = false; 
         //if(player != null)
        // {
        // StartCoroutine(spawnEnemy(spawnInterval, minions));
@@ -54,7 +57,11 @@ public class EnemySpawner : MonoBehaviour
         //int numberOfEnemiesIS = GameObject.FindGameObjectWithTag("Enemy"); 
         int aliveEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length - 1; 
         currentTime += Time.deltaTime;
-        countdownText.text = currentTime.ToString("0");
+        if(player != null && isVictory == false)
+        {
+            countdownText.text = currentTime.ToString("0");
+        }
+        
         remainingEnemies.text = amountOfEnemies.ToString("0");
         enemiesAlive.text = aliveEnemies.ToString("0");
         spawnTime += Time.deltaTime;
@@ -82,6 +89,7 @@ public class EnemySpawner : MonoBehaviour
         if(aliveEnemies == 0 && amountOfEnemies == 0 && currentTime >= 5)
         {
             OnPlayerVictory?.Invoke();
+            isVictory = true; 
         }
         //if(currentTime <= 3)
         //{
