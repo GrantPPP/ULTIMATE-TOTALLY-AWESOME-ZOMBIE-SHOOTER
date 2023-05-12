@@ -89,10 +89,10 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         
-        PlayerDirectionInput();
-        PlayerJumpInput();
-        PlayerShootInput();
-        PlayerMovement();
+            PlayerDirectionInput();
+            PlayerJumpInput();
+            PlayerShootInput();
+            PlayerMovement();
             
         if(currentHealth <= 0)
         {
@@ -128,7 +128,7 @@ public class PlayerController : MonoBehaviour
         float shootTimeLength = 0;
         float keyShootReleaseTimeLength = 0;
 
-        keyShoot = Input.GetKey(KeyCode.C);
+        keyShoot = Input.GetKey(KeyCode.Return);
 
         if(keyShoot && keyShootRelease)
         {
@@ -317,14 +317,16 @@ public class PlayerController : MonoBehaviour
     void Defeat()
     {
         Destroy(gameObject, 0f);
-        
+        animator.Play("Death");
+        OnPlayerDeath?.Invoke();
     }
+
 
    public void TakeDamager(float damage)
     {
         healthAmount -= damage;
         healthBar.fillAmount = healthAmount / 100f;
-        
+
     }
-    
+
 }
