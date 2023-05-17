@@ -19,7 +19,7 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-       
+        
         
     }
 

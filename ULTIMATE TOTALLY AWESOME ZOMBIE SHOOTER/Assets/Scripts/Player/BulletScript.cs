@@ -73,5 +73,14 @@ public class BulletScript : MonoBehaviour
             }
             Destroy(gameObject, 0.01f);
         }
+        if(other.gameObject.CompareTag("Boss"))
+        {
+            EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
+            if(enemy != null)
+            {
+                enemy.TakeDamage(this.damage);
+            }
+            Destroy(gameObject, 0.01f);
+        }
     }
 }

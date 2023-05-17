@@ -29,6 +29,10 @@ public class EnemySpawner : MonoBehaviour
 
     bool isVictory; 
 
+    GameObject boss;
+
+    bool stop; 
+
     //private int numberOfEnemiesIS;
 
     [SerializeField] Text countdownText;
@@ -48,7 +52,10 @@ public class EnemySpawner : MonoBehaviour
       //  }
 
         currentTime = startingTime;
+
+        boss = GameObject.FindWithTag("Boss"); 
         
+        stop = false;
     }
 
     // Update is called once per frame
@@ -86,11 +93,19 @@ public class EnemySpawner : MonoBehaviour
             }
         }
 
-        if(aliveEnemies == 0 && amountOfEnemies == 0 && currentTime >= 5)
+        if(aliveEnemies == 0 && amountOfEnemies == 0 && currentTime >= 5 && stop == false)
         {
-            OnPlayerVictory?.Invoke();
-            isVictory = true; 
+            Invoke("TeleportBoss", 5f);
+            stop = true; 
+           
         }
+
+        if(boss == null)
+        {
+            isVictory = true; 
+            OnPlayerVictory?.Invoke();
+        }
+        
         //if(currentTime <= 3)
         //{
            // isZero = true;
@@ -103,7 +118,10 @@ public class EnemySpawner : MonoBehaviour
         //}
     }
 
-
+    private void TeleportBoss()
+    {
+        boss.transform.position = new Vector2(6f, -1.935414f); 
+    }
 
     private IEnumerator spawnEnemy(float interval, GameObject enemy)
     {
