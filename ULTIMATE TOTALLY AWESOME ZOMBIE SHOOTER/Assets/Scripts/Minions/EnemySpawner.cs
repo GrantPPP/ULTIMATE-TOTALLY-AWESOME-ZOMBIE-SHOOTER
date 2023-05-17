@@ -56,6 +56,8 @@ public class EnemySpawner : MonoBehaviour
         boss = GameObject.FindWithTag("Boss"); 
         
         stop = false;
+
+        spawnTime = 0;
     }
 
     // Update is called once per frame
