@@ -155,7 +155,7 @@ MonoBehaviour:
   minions: {fileID: 6100635896553191807}
   player: {fileID: 1978521284}
   spawnInterval: 1.5
-  amountOfEnemies: 10
+  amountOfEnemies: 99
   countdownText: {fileID: 706008233}
   remainingEnemies: {fileID: 1498867484}
   enemiesAlive: {fileID: 431338360}
@@ -1198,8 +1198,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740734698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.0509, z: 0}
-  m_LocalScale: {x: 0.62459034, y: 0.31214467, z: 0}
+  m_LocalPosition: {x: -0, y: 0.1292, z: 0}
+  m_LocalScale: {x: 0.62459034, y: 0.33758447, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1336722244}
@@ -2058,7 +2058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5808685206230709930, guid: 6299758fb18edd14ba24c308966bed45, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.5377803
+      value: -1.2877803
       objectReference: {fileID: 0}
     - target: {fileID: 5808685206230709930, guid: 6299758fb18edd14ba24c308966bed45, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2195,7 +2195,7 @@ AudioSource:
   m_Volume: 0.509
   m_Pitch: 1
   Loop: 0
-  Mute: 1
+  Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128

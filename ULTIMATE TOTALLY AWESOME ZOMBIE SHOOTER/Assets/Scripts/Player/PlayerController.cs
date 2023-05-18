@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     bool hitSideRight;
 
     float shootTime;
+    float shootCoolDown; 
     bool keyShootRelease;
 
     public int currentHealth;
@@ -52,8 +53,8 @@ public class PlayerController : MonoBehaviour
         isFacingRight = true;
 
         currentHealth = maxHealth;
-
         
+        shootCoolDown = 0; 
 
     }
 
@@ -89,10 +90,12 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         
-            PlayerDirectionInput();
-            PlayerJumpInput();
-            PlayerShootInput();
-            PlayerMovement();
+        PlayerDirectionInput();
+        PlayerJumpInput();
+        PlayerShootInput();
+        PlayerMovement();
+
+        shootCoolDown = Time.deltaTime; 
             
         if(currentHealth <= 0)
         {
@@ -136,7 +139,10 @@ public class PlayerController : MonoBehaviour
             keyShootRelease = false;
             shootTime = Time.time;
             //Shoot Bullet
+           
             Invoke("ShootBullet", 0.1f);
+            
+            
         }
         if(!keyShoot && !keyShootRelease)
         {

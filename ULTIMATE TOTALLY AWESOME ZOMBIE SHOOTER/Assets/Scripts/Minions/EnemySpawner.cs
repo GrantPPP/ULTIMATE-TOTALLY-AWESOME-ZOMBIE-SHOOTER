@@ -97,7 +97,7 @@ public class EnemySpawner : MonoBehaviour
 
         if(aliveEnemies == 0 && amountOfEnemies == 0 && currentTime >= 5 && stop == false)
         {
-            Invoke("TeleportBoss", 5f);
+            Invoke("TeleportBoss", 2.5f);
             stop = true; 
            
         }
