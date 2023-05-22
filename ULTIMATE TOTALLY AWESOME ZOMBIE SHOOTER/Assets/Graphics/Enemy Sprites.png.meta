@@ -1,0 +1,267 @@
+fileFormatVersion: 2
+guid: 749d790b68b08c9468592e19e67efd39
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemy_Run1
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 73
+        width: 8
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be0f21f5a9e8bab43a4f93344052d793
+      internalID: -1455130322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Run2
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 73
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a179ec669aec53e4a83bb12a55487993
+      internalID: 522782180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Run3
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 73
+        width: 8
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3e7d69516b0292418923152404c68a1
+      internalID: -588672810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Run4
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 74
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ebe2b091ab486499395164581d4d1e
+      internalID: -1579797047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Enemy Sprites_14: -1027262529
+      Enemy Sprites_25: 1381738529
+      Enemy Sprites_17: 565567905
+      Enemy Sprites_40: 1848521413
+      Enemy Sprites_4: 2090506699
+      Enemy Sprites_0: -798855748
+      Enemy Sprites_48: -1861034285
+      Enemy Sprites_30: 679446647
+      Enemy Sprites_50: 1522307352
+      Enemy Sprites_46: 2147029155
+      Enemy Sprites_6: 2080948749
+      Enemy Sprites_8: 578711359
+      Enemy Sprites_12: 1809427546
+      Enemy Sprites_27: -522549109
+      Enemy Sprites_24: -1349240249
+      Enemy Sprites_3: 113247123
+      Enemy Sprites_41: 1905967700
+      Enemy Sprites_31: -337565822
+      Enemy Sprites_16: -1321653325
+      Enemy Sprites_26: 1140211045
+      Enemy Sprites_23: 1279143063
+      Enemy Sprites_13: 309082272
+      Enemy_Run4: -1579797047
+      Enemy Sprites_42: 318582341
+      Enemy Sprites_1: -2107287593
+      Enemy Sprites_43: -1876017447
+      Enemy Sprites_22: 1247784597
+      Enemy Sprites_49: -480107948
+      Enemy Sprites_51: 2137195434
+      Enemy Sprites_2: -688784318
+      Enemy Sprites_20: -379034103
+      Enemy_Run3: -588672810
+      Enemy Sprites_7: 64905578
+      Enemy Sprites_28: -884970967
+      Enemy Sprites_29: 2063617254
+      Enemy Sprites_15: -1927564052
+      Enemy Sprites_32: -2038283091
+      Enemy_Run1: -1455130322
+      Enemy Sprites_44: -303557874
+      Enemy Sprites_18: 1900969816
+      Enemy Sprites_9: -546759940
+      Enemy Sprites_11: -447448079
+      Enemy_Run2: 522782180
+      Enemy Sprites_21: -238921601
+      Enemy Sprites_5: -385664164
+      Enemy Sprites_47: -1776969416
+      Enemy Sprites_45: 2129678189
+      Enemy Sprites_10: 1480025520
+      Enemy Sprites_19: 240284358
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

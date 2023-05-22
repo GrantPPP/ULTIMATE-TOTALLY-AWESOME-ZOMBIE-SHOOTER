@@ -600,7 +600,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 2d5c1b53a81478a45b7da2600e6add5b, type: 3}
+    m_Font: {fileID: 12800000, guid: 61835714376774243a13594be239baeb, type: 3}
     m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
@@ -612,7 +612,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ultimate Totally Awesome Zombie Shooter
+  m_Text: Save Julius Caesar
 --- !u!222 &1428819214
 CanvasRenderer:
   m_ObjectHideFlags: 0
